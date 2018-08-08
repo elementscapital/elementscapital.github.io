@@ -9,7 +9,7 @@ Created on Wed Aug  8 20:10:41 2018
 import cv2
 import numpy as np
 
-pic1=cv2.imread("heptadecagon++.png",-1)
+pic1=cv2.imread("heptadecagon++.svg",-1)
 
 def whitetotrans(input):
     pic=input.copy()
