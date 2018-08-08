@@ -1,0 +1,166 @@
+﻿a {
+	color: #57b6de;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+ul {
+	list-style-type: disc;
+	list-style-position: inside; 
+}
+body {
+	background-color: #404041;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 13px;
+	line-height: 1.4em;
+	color: #57b6de;
+}
+.copyright {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 5px;
+	padding-top: 20px;
+	font-size: 10px;
+}
+.footer {
+	/* background-image: url('../images/pellion_footerback.png'); */
+	background-repeat: repeat-x;
+	background-position: top;
+	height: 120px;
+	color: #63BCDE;
+	font-size: 10px;
+	background-color: #404041;
+}
+.footer a {
+	color: #B7E0F0;
+	text-decoration: none;
+}
+.footer a:hover {
+	text-decoration: none;
+	color: #99CC00;
+}
+.header {
+	/* background-image: url('../images/pellion_headerback.jpg'); */
+	background-repeat: repeat-x;
+	background-position: top;
+	height: 104px;
+}
+.headerinside {
+	width: 940px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.innerbox {
+	width: 940px;
+	margin-right: auto;
+	margin-left: auto;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-color: #03567A;
+	border-left-color: #03567A;
+}
+.lefttext {
+	padding: 30px;
+	float: left;
+	width: 880px;
+	color: #fff;
+}
+.lefttext a {
+	font-size: 10px;
+	font-weight: bold;
+	color: #FF9900;
+}
+.logo {
+	width: 240px;
+	float: left;
+	padding-top: 28px;
+}
+.main {
+	background-color: #404041;
+}
+.mainpic {
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+.maintext {
+	width: 600px;
+	font-size: 20px;
+	line-height: 1.4em;
+	margin-top: 4px;
+	text-align: center;
+	color: #ffffff;
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	transform: translateX(-50%) ;
+}
+.maintextback {	
+	/* background-image: url('../images/pellion_mainlowback.jpg'); */
+	background-repeat: repeat-y;
+}
+.nav {
+	float: left;
+	padding-top: 20px;
+	border-bottom-style: solid;
+	border-bottom-color: #C0C0C0;
+	border-bottom-width: 1px;
+	margin-left: 50px;
+}
+.nav a {
+	font-size: 15px;
+	color: #404041;
+	text-decoration: none;
+	display: inline-block;
+	padding: 20px 26px 8px 26px;
+	font-weight: bold;
+}
+.nav a:hover {
+	color: #1d6b89;
+	text-decoration: none;
+	display: inline-block;
+	/* background-image: url('../images/pellion_navhighlight.jpg'); */
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+.nav ul {
+	list-style-type: none;
+}
+.nav li {
+	float: left;
+}
+.news {
+	padding: 50px 20px 20px 20px;
+	width: 310px;
+	float: left;
+	color: #fff;
+	font-size: 11px;
+	line-height: 15px;
+}
+.news a {
+	font-weight: bold;
+}
+.subpic {
+	height: 160px;
+}
+.subtext {
+	background-color: #FFFFFF;
+	padding: 40px 80px 60px 80px;
+}
+.subtitle {
+	padding-bottom: 10px;
+	font-weight: bold;
+	font-size: 17px;
+	margin-bottom: 20px;
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	border-bottom-color: #999999;
+}
+
