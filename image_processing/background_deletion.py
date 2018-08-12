@@ -35,6 +35,14 @@ def colorinverse(input):
     g=255-g
     r=255-r
     return cv2.merge((b,g,r,a))
+
+def nontranstowhite(input):
+    pic=input.copy()
+    b,g,r,a=cv2.split(pic)
+    logicalM=(a!=0)
+    ones=255*np.ones(b.shape,dtype = "uint8")
+    b=g=r=np.multiply(ones,logicalM)
+    return cv2.merge((b,g,r,a))
     
     
 
