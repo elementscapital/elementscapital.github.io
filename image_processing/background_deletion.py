@@ -11,23 +11,32 @@ import numpy as np
 
 pic1=cv2.imread("output.jpg",-1)
 
+
 #white to transparent
-def whitetotrans(input):
+def whitetotransvec(input):
     pic=input.copy()
     if len(cv2.split(pic))==4:
         b,g,r,a=cv2.split(pic)
     else:
         b,g,r=cv2.split(pic)
-        a=np.ones(b.shape,dtype = "uint8")
-    shape=b.shape
-    for i in range(shape[0]):
-        for j in range(shape[1]):
-            if b[i,j]==255:
-                if g[i,j]==255:
-                    if r[i,j]==255:
-                            a[i,j]=0
-        print(i)
+        a=255*np.ones(b.shape,dtype = "uint8")
+    logicalM=np.logical_and(b==255,g==255,r==255)
+    a=np.multiply(a,np.logical_not(logicalM))
     return cv2.merge((b,g,r,a))
+
+def alphareverse(input):
+    b,g,r,a=cv2.split(input)
+    a=255-a
+    return cv2.merge((b,g,r,a))
+
+def colorinverse(input):
+    b,g,r,a=cv2.split(input)
+    b=255-b
+    g=255-g
+    r=255-r
+    return cv2.merge((b,g,r,a))
+    
+    
 
 
 def makesquare(input):
@@ -42,3 +51,4 @@ def resize(input, scale):
 
 
 #cv2.imwrite("placeholder_clients.png",pacifier(pic1))
+#cv2.imwrite("trans_alt.png",resize(makesquare(alphareverse(aaa)),0.5))
