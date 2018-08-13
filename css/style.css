@@ -104,12 +104,12 @@ a:hover, a:focus {
 }
 
 #TitleText {
-/*    font-size: 60px;
-    font-weight: 300;
+    font-size: 60px;
+/*    font-weight: 300;
     letter-spacing: -0.5px;
     margin-bottom: 1.5rem;
     */
-    margin-top: 8rem;
+    margin-top: 20rem;
     font-family: Garamond, Baskerville, "Baskerville Old Face";
     color: rgba(255, 255, 255, 1);
     position: relative;
