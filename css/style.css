@@ -103,7 +103,7 @@ a:hover, a:focus {
     color: #FFF;
 }
 
-h1.TitleText {
+#TitleText {
 /*    font-size: 60px;
     font-weight: 300;
     letter-spacing: -0.5px;
