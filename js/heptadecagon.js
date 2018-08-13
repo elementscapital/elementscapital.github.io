@@ -1,5 +1,7 @@
 function runSim() {
-  var board = JXG.JSXGraph.initBoard('boxlogo',{boundingbox: [-12, 12, 12, -12],axis:false,showCopyright:false,
+  var board = JXG.JSXGraph.initBoard('boxlogo',{boundingbox: [-12, 12, 12, -12],
+    axis:false,
+    showCopyright:false,
     showNavigation:false,keepaspectratio: true,
     showClearTraces:false,
     registerEvents:false});
@@ -98,6 +100,7 @@ function runSim() {
   }
 }
 var box = document.getElementById("boxlogo");
+
 //box.style.width = (window.innerWidth - 50) + 'px';
 //box.style.height = (window.innerHeight - 50) + 'px';
 runSim();

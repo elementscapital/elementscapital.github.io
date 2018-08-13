@@ -111,6 +111,8 @@ h1.TitleText {
     */
     font-family: Garamond, Baskerville, "Baskerville Old Face";
     color: rgba(255, 255, 255, 1);
+    position: relative;
+    z-index: 99;
 }
 
 p.TitleTagline {
@@ -649,12 +651,22 @@ img.logo_center{
     background-color: transparent;
     border: 0;
     max-height: 40em;
-    margin-top: 1em;
-    margin-bottom: 2em;
     text-align: center;
     opacity: 0.7;
     display: block;
+/*    -webkit-transform: rotateZ(0deg);*/
+    animation-name: logoRotation;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
+
+@keyframes logoRotation {
+   from { -webkit-transform: rotateZ(0deg); }
+   to { -webkit-transform: rotateZ(360deg); }
+}
+
 /*}
 .jxgbox {
     background-color: transparent;
