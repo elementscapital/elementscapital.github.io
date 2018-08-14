@@ -56,7 +56,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 20px;
     color: #10161A;
 }
@@ -109,11 +109,19 @@ a:hover, a:focus {
     letter-spacing: -0.5px;
     margin-bottom: 1.5rem;
     */
-    margin-top: 20rem;
+    margin-top: 22vh;
     font-family: Garamond, Baskerville, "Baskerville Old Face";
+    color: black;
     color: rgba(255, 255, 255, 1);
     position: relative;
     z-index: 99;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets and desktops: */
+    #TitleText {
+        margin-top: 4vh;
+    }
 }
 
 p.TitleTagline {
@@ -658,7 +666,7 @@ img.logo_center{
 /*    -webkit-transform: rotateZ(0deg);*/
     animation-name: logoRotation;
     animation-duration: 10s;
-    animation-delay: 4s;
+    animation-delay: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 /*animation-timing-function: ease-in;*/
@@ -666,7 +674,7 @@ img.logo_center{
 
 @keyframes logoRotation {
    0% { -webkit-transform: rotateZ(0deg); }
-   10%  { -webkit-transform: rotateZ(18deg); }
+/*   10%  { -webkit-transform: rotateZ(18deg); }*/
    100% { -webkit-transform: rotateZ(360deg); }
 }
 
