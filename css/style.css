@@ -110,7 +110,7 @@ a:hover, a:focus {
   margin-top: 22vh;
   font-family: Garamond, Baskerville, "Baskerville Old Face";
   color: black;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(0, 0, 0, 0.8);
   position: relative;
   z-index: 99;
 }
@@ -123,7 +123,7 @@ a:hover, a:focus {
 }
 
 p.TitleTagline {
-  color: #FFF;
+  color: #000;
   text-align: center;
   max-width: 1200px;
   font-size: 2rem;
@@ -340,7 +340,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 #nav {
   padding: 10px 0px;
-  background: #FFF;
+  background: #AF5542;
   -webkit-transition: 0.2s padding;
   transition: 0.2s padding;
   z-index: 999;
@@ -352,12 +352,14 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
   margin-bottom: 0px;
 }
 
+
 #nav.fixed-nav {
   position: fixed;
   left: 0;
   right: 0;
   padding: 0px 0px;
-  background-color: #FFF !important;
+  /*color of nav bar when scrolled down*/
+  background-color: rgba(10, 10, 10, 0.8) !important;
   border-bottom: 1px solid #EEE;
 }
 
@@ -377,11 +379,12 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     transition: 0.2s color;
   }
   .main-nav>li>a {
-    color: #10161A;
+    /*color of text in the nav bar when scrolled down*/
+    color: #FFFFFF;
     padding: 15px 0px;
   }
   #nav.nav-transparent:not(.fixed-nav) .main-nav>li>a {
-    color: #fff;
+    color: #000000;
   }
   .main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
     background: transparent;
@@ -665,7 +668,7 @@ img.logo_center {
   max-height: 400px
 }
 
-#boxlogo {
+#logoMain {
   background-color: transparent;
   border: 0;
   max-height: 40em;
@@ -946,11 +949,11 @@ iframe::after {
 	Why choose us
 \*------------------------------------*/
 
-.feature {
+.aboutus {
   margin: 15px 0px;
 }
 
-.feature i {
+.aboutus i {
   float: left;
   padding: 5px;
   border-radius: 50%;
@@ -1603,8 +1606,9 @@ iframe::after {
   text-align: center;
   font-size: 14px;
   text-transform: uppercase;
-  margin: 0;
+  margin-top: 40px;
 }
+
 
 /*------------------------------------*\
 	Responsive

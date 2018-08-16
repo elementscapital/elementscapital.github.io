@@ -1,5 +1,5 @@
-function runSim() {
-  var board = JXG.JSXGraph.initBoard('boxlogo',{boundingbox: [-12, 12, 12, -12],
+function runSim(boxidentity,pointT,lineW,linecolor) {
+  var board = JXG.JSXGraph.initBoard(boxidentity,{boundingbox: [-12, 12, 12, -12],
     axis:false,
     showCopyright:false,
     showNavigation:false,keepaspectratio: true,
@@ -89,18 +89,30 @@ function runSim() {
     hc.remove();
     hi.remove();
   }
-
+//Draw the points
   for(i=0; i<=16; i++){
     //var nnn = i.toString();
     var nnn='';
-    board.create('point',[pts[i].X(),pts[i].Y()], { name: nnn, size: 2});
+    board.create('point',[pts[i].X(),pts[i].Y()], { name: nnn, size: pointT});
   }
+  //Draw the lines
   for(i=0;i<=16;i++){
-    board.create('segment', [pts[i], pts[(i+7)%17]], { strokeColor: 'black', strokeWidth: 4 });
+    board.create('segment', [pts[i], pts[(i+7)%17]], { strokeColor: linecolor, strokeWidth: lineW });
   }
 }
-var box = document.getElementById("boxlogo");
 
+//var box = document.getElementsByClassName(".jxgbox");
 //box.style.width = (window.innerWidth - 50) + 'px';
 //box.style.height = (window.innerHeight - 50) + 'px';
-runSim();
+
+var box = document.getElementById("logoMain");
+runSim('logoMain',2,4,'black');
+
+var box = document.getElementById("logonavinit");
+runSim('logonavinit',0.001,0.5,'black');
+
+var box = document.getElementById("logonavscroll");
+runSim('logonavscroll',0.001,0.5,'white');
+
+var box = document.getElementById("logonavscroll");
+runSim('logoend',0.005,0.5,'white');
