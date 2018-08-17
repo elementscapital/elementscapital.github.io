@@ -29,8 +29,10 @@
 	<link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
 
 
-	<!-- Font Awesome Icon -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Font Awesome 4.7 -->
+	<!-- I do not know why version 5.2 does not work. -->
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
 
 	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
@@ -86,7 +88,12 @@
 				<!-- Search for "main-nav>li>a" in the css file to change color of the text -->
 				<ul class="main-nav nav navbar-nav navbar-right">
 					<li><a href="#home">Home</a></li>
-					<li><a href="#aboutus">About Us</a></li>
+					<li class="has-dropdown"><a href="#aboutus">About Us</a>
+						<ul class="dropdown">
+							<li><a href="#philosophy">Philosophy</a></li>
+							<li><a href="#team">Team</a></li>
+						</ul>
+					</li>
 					<li class="has-dropdown"><a href="#products">Products</a>
 						<ul class="dropdown">
 							<li><a href="#systematic">Systematic value indexes</a></li>
@@ -138,52 +145,31 @@
 		<div class="container">
 
 			<!-- Row -->
+			<div class="section-header text-center">
+				<h2 class="title">About us</h2>
+			</div>
 			<div class="row">
-
-				<!-- why choose us content -->
 				<div class="col-md-6">
-					<div class="section-header">
-						<h2 class="title">About us</h2>
-					</div>
 					<p>
-						<em>We</em> are living in a world which is changing dramatically with innovative technology, and finance and investment
-						industry are inevitably undergoing a transformation with the rising of artificial intelligence as well.
+						Theoretically, we withhold the basic assumption that the market
+						is efficient in the long-run but not completely efficient all the times.
+						Due to the imperfection of the market mechanism,
+						it would leave us some decent space to optimize the whole progress of
+						investing in order to help investors outperform the corresponding benchmarks,
+						without taking more risks in long-term investment horizons.
 					</p>
-					<em>Our</em> founders realized the trend is unstoppable and therefore we decide to create Elements to
-					 walk in the forefront of New Era rather than disappear in the memory of Old Times.
-					 By combining our expertise in value investing, macro asset allocation, quantitative finance and machine learning
-					  techniques, we are better equipped to make a new adventure altogether.
-
-					<div class="aboutus">
-						<i class="fa fa-check"></i>
-						<p>Quis varius quam quisque id diam vel quam elementum.</p>
-					</div>
-					<div class="aboutus">
-						<i class="fa fa-check"></i>
-						<p>Mauris augue neque gravida in fermentum.</p>
-					</div>
-					<div class="aboutus">
-						<i class="fa fa-check"></i>
-						<p>Orci phasellus egestas tellus rutrum.</p>
-					</div>
-					<div class="aboutus">
-						<i class="fa fa-check"></i>
-						<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium.</p>
-					</div>
 				</div>
-				<!-- /why choose us content -->
-
-				<!-- About slider -->
 				<div class="col-md-6">
-					<div id="about-slider" class="owl-carousel owl-theme">
-						<img class="img-responsive" src="./img/about1.jpg" alt="">
-						<img class="img-responsive" src="./img/about2.jpg" alt="">
-						<img class="img-responsive" src="./img/about3.jpg" alt="">
-						<img class="img-responsive" src="./img/about4.jpg" alt="">
-					</div>
+					<p>
+						Empirically, we hold the common senses that value investing
+						has the advantage of achieving absolute higher returns over Mr. Market,
+						that modern portfolio is helpful to result in mean-variance optimization,
+						that arbitrage opportunities still exist in equity markets,
+						futures, and commodities, and that artificial intelligence is more efficient
+						in big-data analysis currently, and might become smarter than human beings
+						in the whole investment progress in the future.
+					</p>
 				</div>
-				<!-- /About slider -->
-
 			</div>
 			<!-- /Row -->
 
@@ -250,16 +236,23 @@
 				<div class="subsection-header text-center">
 					<h3 class="subtitle">Systematic value indexes</h3>
 				</div>
-				<div class="subsection">
+				<div class="subsection-white">
 					<div class="row">
 						<div class="col-md-12">
-							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-								dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+							<p>
+								Our systematic value indexes are the alternative equity products for passive investors.
+								Our systematic value indexes will temporarily focus on MSCI Overseas China,
+								S&P 500 and MSCI ACWI.
+								The goal of the systematic value indexes is to help institutional and retail investors
+								achieve higher return performance than the corresponding passive indexes.
+
+								The demonstration is the back-testing result for our Systematic Value Index compared
+								with S&P 500 between March 30th, 2007 and July 18th, 2019.
 							</p>
 						</div>
 					</div>
 					<div class="center-block">
-						<div class="plotly-wrapper">
+						<div class="plotly-wrapper iframe-white">
 							<iframe width="1000" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~suzukaze/169.embed">
 									loading unsuccessful
 								</iframe>
@@ -279,17 +272,16 @@
 				<div class="subsection-header text-center">
 					<h3 class="subtitle">Algorithmic trading</h3>
 				</div>
-				<div class="row equal subsection">
+				<div class="row equal subsection-grey">
 					<div class="col-md-8">
-						<div class="video-wrapper">
+						<div class="video-wrapper iframe-grey">
 							<iframe src="https://www.youtube.com/embed/DoKeOlzeto8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 						</div>
 					</div>
 					<div class="col-md-4">
-						<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-							voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
-							tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
-							in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+						<p>
+							Our algorithm trading strategy is aimed at the institutional and retail investors who are looking for market risk neutral products with drawdown risks.
+							Our first application and demonstration for this strategy are for cryptocurrencies investors.
 						</p>
 					</div>
 				</div>
@@ -301,12 +293,26 @@
 		<!--robot advisor-->
 		<div id="robot" class="section md-padding">
 			<div class="container">
-				<div class="subsection-header text-center">
+				<div class="subsection-header text-center subsection-white">
 					<h3 class="subtitle">Robot advisor</h3>
 				</div>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
+				<div class="aboutus">
+					<i class="fa fa-android"></i>
+					<p>With the technology development in machine learning and natural language processing,
+					we are also making great efforts to make our company as the leading player in robot advisor
+					around the platform.</p>
+				</div>
+				<div class="aboutus">
+					<i class="fa fa-android"></i>
+					<p>One big character to distinguish us from other robot-advisors
+					is that we would provide investment solution directly except for general macro asset allocation by
+					optimizing the available products in the open market.</p>
+				</div>
+				<div class="aboutus">
+					<i class="fa fa-android"></i>
+					<p> Therefore, we have the capability to make customized products based on clients’ risk-return
+					 preferences and to reduce the total expense ratio in the whole investment process.</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -384,7 +390,6 @@
 	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/hrefsmooth.js"></script>
-
 </body>
 
 </html>

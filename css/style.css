@@ -408,6 +408,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
   }
   .has-dropdown>a:before {
     font-family: 'FontAwesome';
+    /*font-weight: 400;*/
     content: "\f054";
     font-size: 6px;
     margin-left: 6px;
@@ -517,8 +518,9 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     opacity: 1;
   }
   .has-dropdown>a:after {
-    content: "\f054";
     font-family: 'FontAwesome';
+    /*font-weight: 400;*/
+    content: "\f054" ;
     float: right;
     -webkit-transition: 0.2s -webkit-transform;
     transition: 0.2s -webkit-transform;
@@ -768,9 +770,17 @@ img.logo_center {
   align-items: center;
 }
 
-iframe {
+iframe-grey>iframe {
   position: relative;
-  background-color: #F4F4F4;
+  background-color: #FAFAFA;
+  padding: 40px 20px;
+  margin: 15px 0px;
+  display: block;
+}
+
+iframe-white>iframe {
+  position: relative;
+  background-color: #FFF;
   padding: 40px 20px;
   margin: 15px 0px;
   display: block;
@@ -810,13 +820,22 @@ iframe::after {
   }
 }
 
-.subsection {
+.subsection-grey {
   position: relative;
-  background-color: #F4F4F4;
+  background-color: #FAFAFA;
   padding: 40px 20px;
   margin: 15px 0px;
   display: block;
 }
+
+.subsection-white {
+  position: relative;
+  background-color: #FFF;
+  padding: 40px 20px;
+  margin: 15px 0px;
+  display: block;
+}
+
 
 .subsection::after {
   content: "";
@@ -830,6 +849,8 @@ iframe::after {
   -webkit-transition: 0.2s height;
   transition: 0.2s height;
 }
+
+
 
 /*------------------------------------*\
 	Portfolio
@@ -946,7 +967,7 @@ iframe::after {
 }
 
 /*------------------------------------*\
-	Why choose us
+	About Us
 \*------------------------------------*/
 
 .aboutus {
@@ -958,7 +979,7 @@ iframe::after {
   padding: 5px;
   border-radius: 50%;
   color: #6195FF;
-  border: 1px solid #6195FF;
+/*  border: 1px solid #6195FF;*/
   margin-right: 5px;
 }
 
@@ -1763,8 +1784,8 @@ iframe::after {
 }
 
 #back-to-top:after {
-  content: "\f106";
   font-family: 'FontAwesome';
+  content: "\f106";
 }
 
 #back-to-top:hover {
