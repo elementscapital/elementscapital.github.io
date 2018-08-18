@@ -169,6 +169,12 @@ ul, ol {
   border-bottom: 1px solid #EEE;
 }
 
+.bg-white {
+  background-color: #FFF;
+  border-top: 1px solid #EEE;
+  border-bottom: 1px solid #EEE;
+}
+
 .bg-dark {
   background-color: #1C1D21;
 }
@@ -407,7 +413,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     position: relative;
   }
   .has-dropdown>a:before {
-    font-family: 'FontAwesome';
+    font-family: "FontAwesome";
     /*font-weight: 400;*/
     content: "\f054";
     font-size: 6px;
@@ -518,7 +524,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     opacity: 1;
   }
   .has-dropdown>a:after {
-    font-family: 'FontAwesome';
+    font-family: "FontAwesome";
     /*font-weight: 400;*/
     content: "\f054" ;
     float: right;
@@ -981,6 +987,11 @@ iframe::after {
   color: #6195FF;
 /*  border: 1px solid #6195FF;*/
   margin-right: 5px;
+}
+
+.name {
+ font-weight:bold;
+ color: #000;
 }
 
 /*------------------------------------*\
@@ -1784,7 +1795,7 @@ iframe::after {
 }
 
 #back-to-top:after {
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   content: "\f106";
 }
 
