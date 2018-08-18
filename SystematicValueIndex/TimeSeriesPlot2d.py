@@ -32,7 +32,7 @@ def plotlyslider(date,Y1,Y2,name1='1',name2='2',\
             x=date,
             y=Y1,
             name = name1,
-            yaxis='y',
+#            yaxis='y',
             line = dict(color = '#17BECF',width=3),
             opacity = 0.8)
 
@@ -40,14 +40,15 @@ def plotlyslider(date,Y1,Y2,name1='1',name2='2',\
             x=date,
             y=Y2,
             name = name2,
-            yaxis='y2',
-            line = dict(color = '#7F7F7F'),
+#            yaxis='y2',
+            line = dict(color = '#7F7F7F',width=3),
             opacity = 0.8)
 
     data = [trace_1,trace_2]
 
     layout = dict(
             title=TITLE,
+            #start of xaxis
             xaxis=dict(
                 rangeselector=dict(
                     buttons=list([
@@ -87,6 +88,24 @@ def plotlyslider(date,Y1,Y2,name1='1',name2='2',\
             ),
                 type='date'
             ),
+        #end of xaxis
+        legend=dict(orientation="h")
+            
+    )
+
+    fig = dict(data=data, layout=layout)
+    #fileopt='overwrite'
+    url=py.plot(fig,auto_open=False,filename='SVI',fileopt='overwrite')
+    return url
+
+
+
+#demo
+#df = web.DataReader('AAPL', 'iex',datetime(2014, 10, 1),datetime(2018, 4, 1))
+
+#plotlyslider(df.index,df['close'],df['volume'])
+    
+'''
         yaxis=dict(
             title=name1,
             titlefont=dict(
@@ -107,16 +126,4 @@ def plotlyslider(date,Y1,Y2,name1='1',name2='2',\
             overlaying='y',
             side='right'
             )   
-    )
-
-    fig = dict(data=data, layout=layout)
-    #fileopt='overwrite'
-    url=py.plot(fig,auto_open=False,filename='SVI',fileopt='new')
-    return url
-
-
-
-#demo
-#df = web.DataReader('AAPL', 'iex',datetime(2014, 10, 1),datetime(2018, 4, 1))
-
-#plotlyslider(df.index,df['close'],df['volume'])
+'''
