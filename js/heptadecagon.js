@@ -259,13 +259,13 @@ function runSim(boxidentity, mode, pointT, lineW, linecolor) {
 //box.style.height = (window.innerHeight - 50) + 'px';
 
 var box = document.getElementById("logoMain");
-runSim('logoMain', 'point', 1, 4, 'black');
+runSim('logoMain', 'point', 1.2, 4, 'black');
 
 var box = document.getElementById("logonavinit");
-runSim('logonavinit', 'disk',0.6, 0.5, 'black');
+runSim('logonavinit', 'disk',0.5, 0.5, 'black');
 
 var box = document.getElementById("logonavscroll");
-runSim('logonavscroll', 'disk',0.6, 0.5, 'white');
+runSim('logonavscroll', 'disk',0.5, 0.5, 'white');
 
-var box = document.getElementById("logonavscroll");
-runSim('logoend', 'disk',0.6, 0.5, 'white');
+var box = document.getElementById("logoend");
+runSim('logoend', 'disk',0.5, 0.5, 'white');
