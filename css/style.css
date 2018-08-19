@@ -44,7 +44,7 @@ Table OF Contents
 /* -- typography -- */
 
 body {
-  font-family: 'Varela Round', sans-serif;
+  font-family: Times,/*'Times New Roman'*/,/*'Varela Round',*/ sans-serif;
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
@@ -684,23 +684,46 @@ img.logo_center {
   opacity: 0.7;
   display: block;
   /*    -webkit-transform: rotateZ(0deg);*/
+  /*
   animation-name: logoRotation;
   animation-duration: 10s;
   animation-delay: 2.5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  */
   /*animation-timing-function: ease-in;*/
+}
+
+
+
+/*
+@keyframes logoRotation {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+  }
+}
+*/
+
+.rotation {
+  animation-name: logoRotation;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 @keyframes logoRotation {
   0% {
     -webkit-transform: rotateZ(0deg);
   }
-  /*   10%  { -webkit-transform: rotateZ(18deg); }*/
   100% {
     -webkit-transform: rotateZ(360deg);
   }
 }
+
 
 /*}
 .jxgbox {
@@ -774,6 +797,26 @@ img.logo_center {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  width: 480px;
+  height: 360px;
+  margin-left: -50px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For tablets and desktops: */
+  .plotly-wrapper {
+    width: 768px;
+    height: 576px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  /* For tablets and desktops: */
+  .plotly-wrapper {
+    width: 1100px;
+    height: 800px;
+    margin-left:auto;
+  }
 }
 
 iframe-grey>iframe {

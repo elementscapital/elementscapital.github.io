@@ -219,6 +219,8 @@ function runSim(boxidentity, mode, pointT, lineW, linecolor) {
     hc.remove();
     hi.remove();
   }
+
+
   //Draw the lines
   for (i = 0; i <= 16; i++) {
     board.create('segment', [pts[i], pts[(i + 7) % 17]], {
@@ -227,7 +229,7 @@ function runSim(boxidentity, mode, pointT, lineW, linecolor) {
     });
   }
 
-  //Draw the points/disks. such that the are above the lines
+  //Draw the points/disks, such that the are above the lines
   if (mode == 'point') {
     for (i = 0; i <= 16; i++) {
       //var nnn = i.toString();
@@ -257,13 +259,13 @@ function runSim(boxidentity, mode, pointT, lineW, linecolor) {
 //box.style.height = (window.innerHeight - 50) + 'px';
 
 var box = document.getElementById("logoMain");
-runSim('logoMain', 'point', 2, 4, 'black');
+runSim('logoMain', 'point', 1.5, 4, 'black');
 
 var box = document.getElementById("logonavinit");
-runSim('logonavinit', 'disk',0.8, 0.5, 'black');
+runSim('logonavinit', 'disk',0.6, 0.5, 'black');
 
 var box = document.getElementById("logonavscroll");
-runSim('logonavscroll', 'disk',0.8, 0.5, 'white');
+runSim('logonavscroll', 'disk',0.6, 0.5, 'white');
 
 var box = document.getElementById("logonavscroll");
-runSim('logoend', 'disk',0.8, 0.5, 'white');
+runSim('logoend', 'disk',0.6, 0.5, 'white');
