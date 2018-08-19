@@ -107,7 +107,7 @@ a:hover, a:focus {
     letter-spacing: -0.5px;
     margin-bottom: 1.5rem;
     */
-  margin-top: 22vh;
+  margin-top: 200px;
   font-family: Garamond, Baskerville, "Baskerville Old Face";
   color: black;
   color: rgba(0, 0, 0, 0.8);
@@ -115,10 +115,19 @@ a:hover, a:focus {
   z-index: 99;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-height: 600px) {
   /* For tablets and desktops: */
   #TitleText {
-    margin-top: 4vh;
+    margin-top: 200px;
+    padding-top: 40vh;
+  }
+}
+
+
+@media only screen and (min-height: 800px) {
+  /* For tablets and desktops: */
+  #TitleText {
+    margin-top: 80px;
   }
 }
 
@@ -331,6 +340,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
   display: none;
 }
 
+
 @media only screen and (max-width: 767px) {
   #nav.nav-transparent .navbar-brand .logo-alt {
     display: none !important;
@@ -339,6 +349,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     display: block !important;
   }
 }
+
 
 /*------------------------------------*\
 	Navigation
@@ -480,8 +491,9 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
   #nav {
     padding: 0px 0px;
   }
+  /*color of the nav bar when loaded */
   #nav.nav-transparent {
-    background: #FFF;
+    background: rgba(0, 0, 0, 0.8);
   }
   .main-nav {
     position: fixed;
@@ -826,21 +838,37 @@ img.logo_center {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 480px;
-  height: 360px;
+  width: 340px;
+  height: 300px;
   margin-left: -50px;
 }
 
+/*for small phones*/
+@media only screen and (min-width: 415px) {
+  .plotly-wrapper {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+/*for small phones*/
+@media only screen and (min-width: 480px) {
+  .plotly-wrapper {
+    width: 100vw;
+    height: 75vw;
+  }
+}
+
 @media only screen and (min-width: 768px) {
-  /* For tablets and desktops: */
+  /* For tablets: */
   .plotly-wrapper {
     width: 768px;
-    height: 576px;
+    height: 600px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  /* For tablets and desktops: */
+  /* For desktops: */
   .plotly-wrapper {
     width: 1100px;
     height: 800px;
