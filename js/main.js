@@ -4,7 +4,7 @@
   ///////////////////////////
   // Preloader
   $(window).on('load', function() {
-    $("#preloader").delay(600).fadeOut();
+    $("#preloader").delay(311).fadeOut();
   });
 
   ///////////////////////////
@@ -126,14 +126,13 @@
       }
     });
 
-		var logofooter=$("#logoend");
-		logofooter.on("mouseover",function(){
-			logofooter.addClass("rotation");
+		var logonavscro=$("#logonavscroll");
+		logonavscro.on("mouseover",function(){
+			logonavscro.addClass("rotation");
 		});
 
-		logofooter.on("mouseleave",function(){
-			logofooter.removeClass("rotation");
+		logonavscro.on("mouseleave",function(){
+			logonavscro.removeClass("rotation");
 		});
-
 
 })(jQuery);

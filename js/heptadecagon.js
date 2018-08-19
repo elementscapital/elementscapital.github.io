@@ -259,7 +259,7 @@ function runSim(boxidentity, mode, pointT, lineW, linecolor) {
 //box.style.height = (window.innerHeight - 50) + 'px';
 
 var box = document.getElementById("logoMain");
-runSim('logoMain', 'point', 1.5, 4, 'black');
+runSim('logoMain', 'point', 1, 4, 'black');
 
 var box = document.getElementById("logonavinit");
 runSim('logonavinit', 'disk',0.6, 0.5, 'black');
