@@ -653,6 +653,7 @@ header {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .home-content h1 {
@@ -840,7 +841,7 @@ img.logo_center {
   align-items: center;
   width: 320px;
   height: 400px;
-  margin-left: -50px;
+/*  margin-left: -50px;*/
 }
 
 /*for small phones*/

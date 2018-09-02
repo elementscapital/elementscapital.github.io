@@ -98,7 +98,10 @@ layout = {
       ]},
     rangeslider: {visible: true},
     type: 'date'
-  }
+  },
+  //Change the background color to transparent
+  paper_bgcolor: 'rgba(0,0,0,0)',
+  plot_bgcolor: 'rgba(0,0,0,0)'
 };
 Plotly.plot('plotly-svi', {
   data: data,
