@@ -36,7 +36,7 @@ trace1 = {
 data = [trace1];
 layout = {
   legend: {orientation: 'h'},
-  title: 'Strategy Performance',
+  title: '',
   xaxis: {
     rangeselector: {buttons: [
         {

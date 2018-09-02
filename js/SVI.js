@@ -49,7 +49,7 @@ trace2 = {
 data = [trace1, trace2];
 layout = {
   legend: {orientation: 'h'},
-  title: 'Demonstration',
+  title: '',
   xaxis: {
     rangeselector: {buttons: [
         {
