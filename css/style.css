@@ -44,7 +44,7 @@ Table OF Contents
 /* -- typography -- */
 
 body {
-  font-family: Times,/*'Times New Roman'*/,/*'Varela Round',*/ sans-serif;
+  font-family: 'Varela Round','Times New Roman',sans-serif,Times;
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
@@ -107,29 +107,13 @@ a:hover, a:focus {
     letter-spacing: -0.5px;
     margin-bottom: 1.5rem;
     */
-  margin-top: 200px;
+  margin-top: 10vh;
   font-family: Garamond, Baskerville, "Baskerville Old Face";
   color: black;
   color: rgba(0, 0, 0, 0.8);
   position: relative;
-  z-index: 99;
 }
 
-@media only screen and (max-height: 600px) {
-  /* For tablets and desktops: */
-  #TitleText {
-    margin-top: 200px;
-    padding-top: 40vh;
-  }
-}
-
-
-@media only screen and (min-height: 800px) {
-  /* For tablets and desktops: */
-  #TitleText {
-    margin-top: 80px;
-  }
-}
 
 p.TitleTagline {
   color: #000;
@@ -641,17 +625,28 @@ header {
 }
 
 #home {
-  height: 100vh;
+  /*
+  display: flex;
+  flex-direction: column;*/
+  clear:both;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 #home .home-wrapper {
-  position: absolute;
+
+  display: block;
+  /*absolute positioned elements are removed from the flow*/
+  position: static;
+  /*
   left: 0px;
   right: 0px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  */
   text-align: center;
   padding-bottom: 30px;
 }
@@ -663,6 +658,8 @@ header {
 .home-content button {
   margin-top: 20px;
 }
+
+
 
 .header-wrapper h2 {
   display: inline-block;
