@@ -73,14 +73,6 @@
 		gtag('js', new Date());
 		gtag('config', 'UA-123850563-1');
 	</script>
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-	<!-- plotly.js CDN -->
-	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
@@ -400,16 +392,16 @@
 					</div>
 					<div id="plotly_svi_container" class="center-block">
 						<div class="image-svi container">
-							<img src="images/plotly-svi.png" alt="" class="img-responsive"/>
+							<img src="images/plotly-svi.png" alt="" class="img-responsive" />
 						</div>
 					</div>
 					<script>
-						$(function() {
+						$.getScript('https://cdn.plot.ly/plotly-latest.min.js', function() {
 							if ($(window).width() > 767) {
-								var plotly_svi="<div class='plotly-wrapper' id='plotly-svi'></div>";
+								var plotly_svi = "<div class='plotly-wrapper' id='plotly-svi'></div>";
 								$(".image-svi").remove();
 								$("#plotly_svi_container").append(plotly_svi);
-								$("body").append("<script type='text/javascript' src='js/SVI.js'>")
+								$("body").append("<script type='text/javascript' src='js/SVI.js'>");
 							}
 						});
 					</script>
@@ -442,14 +434,23 @@
 						</div>
 					</div>
 					<div id="plotly_crypto_container" class="center-block">
-						<div class="image-crypto container" >
-							<img src="images/plotly-crypto.png" alt="" class="img-responsive" style="width: 100vw;"/>
+						<div class="image-crypto container">
+							<img src="images/plotly-crypto.png" alt="" class="img-responsive" style="width: 100vw;" />
 						</div>
 					</div>
 					<script>
+					/*
 						$(function() {
 							if ($(window).width() > 767) {
-								var plotly_crypto="<div class='plotly-wrapper' id='plotly-crypto'></div>";
+								var plotly_crypto = "<div class='plotly-wrapper' id='plotly-crypto'></div>";
+								$(".image-crypto").remove();
+								$("#plotly_crypto_container").append(plotly_crypto);
+								$("body").append("<script type='text/javascript' src='js/crypto.js'>")
+							}
+						});*/
+						$.getScript('https://cdn.plot.ly/plotly-latest.min.js', function() {
+							if ($(window).width() > 767) {
+								var plotly_crypto = "<div class='plotly-wrapper' id='plotly-crypto'></div>";
 								$(".image-crypto").remove();
 								$("#plotly_crypto_container").append(plotly_crypto);
 								$("body").append("<script type='text/javascript' src='js/crypto.js'>")
