@@ -81,6 +81,7 @@
 	<![endif]-->
 	<!-- plotly.js CDN -->
 	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -397,17 +398,21 @@
 							</p>
 						</div>
 					</div>
-					<div class="center-block">
-						<div class="plotly-wrapper" id="plotly-svi"></div>
-						<!--script deferred to the end -->
-						<!--
-						<div class="plotly-wrapper iframe-white">
-							<iframe width="1100" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~suzukaze/183.embed">
-									loading unsuccessful
-								</iframe>
+					<div id="plotly_svi_container" class="center-block">
+						<div class="image-svi container">
+							<img src="images/plotly-svi.png" alt="" class="img-responsive"/>
 						</div>
-					-->
 					</div>
+					<script>
+						$(function() {
+							if ($(window).width() > 767) {
+								var plotly_svi="<div class='plotly-wrapper' id='plotly-svi'></div>";
+								$(".image-svi").remove();
+								$("#plotly_svi_container").append(plotly_svi);
+								$("body").append("<script type='text/javascript' src='js/SVI.js'>")
+							}
+						});
+					</script>
 
 				</div>
 
@@ -436,9 +441,21 @@
 							</p>
 						</div>
 					</div>
-					<div class="center-block">
-						<div class="plotly-wrapper" id="plotly-crypto"></div>
+					<div id="plotly_crypto_container" class="center-block">
+						<div class="image-crypto container" >
+							<img src="images/plotly-crypto.png" alt="" class="img-responsive" style="width: 100vw;"/>
+						</div>
 					</div>
+					<script>
+						$(function() {
+							if ($(window).width() > 767) {
+								var plotly_crypto="<div class='plotly-wrapper' id='plotly-crypto'></div>";
+								$(".image-crypto").remove();
+								$("#plotly_crypto_container").append(plotly_crypto);
+								$("body").append("<script type='text/javascript' src='js/crypto.js'>")
+							}
+						});
+					</script>
 				</div>
 			</div>
 		</div>
@@ -517,7 +534,7 @@
 	<div id="back-to-top"></div>
 	<!-- /Back to top -->
 
-	<!-- Preloader -->
+	<!-- Preloader-->
 	<div id="preloader">
 		<div class="preloader">
 			<span></span>
@@ -526,18 +543,14 @@
 			<span></span>
 		</div>
 	</div>
-	<!-- /Preloader -->
+	<!--/Preloader -->
 
 	<!-- jQuery Plugins -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="./js/heptadecagon.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/SVI.js"></script>
-	<script type="text/javascript" src="js/crypto.js"></script>
-
 </body>
 
 </html>
